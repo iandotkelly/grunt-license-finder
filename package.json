@@ -1,27 +1,41 @@
 {
   "name": "grunt-license-finder",
-  "version": "0.0.0",
-  "description": "Grunt plugin for finding licenses in the application or dependencies",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "description": "Finds licenses in a node project and its dependencies",
+  "version": "0.1.0",
+  "homepage": "https://github.com/iandotkelly/grunt-license-finder",
+  "author": {
+    "name": "Ian Kelly",
+    "email": "iandotkelly@gmail.com"
   },
   "repository": {
     "type": "git",
     "url": "git://github.com/iandotkelly/grunt-license-finder.git"
   },
-  "keywords": [
-    "license",
-    "nlf",
-    "grunt"
-  ],
-  "author": "Ian Kelly",
-  "license": "MIT",
   "bugs": {
     "url": "https://github.com/iandotkelly/grunt-license-finder/issues"
   },
-  "homepage": "https://github.com/iandotkelly/grunt-license-finder",
-  "dependencies": {
-    "nlf": "~0.2.9"
-  }
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/iandotkelly/grunt-license-finder/blob/master/LICENSE-MIT"
+    }
+  ],
+  "engines": {
+    "node": ">= 0.8.0"
+  },
+  "scripts": {
+    "test": "grunt test"
+  },
+  "devDependencies": {
+    "grunt-contrib-jshint": "^0.9.2",
+    "grunt-contrib-clean": "^0.5.0",
+    "grunt-contrib-nodeunit": "^0.3.3",
+    "grunt": "~0.4.4"
+  },
+  "peerDependencies": {
+    "grunt": "~0.4.4"
+  },
+  "keywords": [
+    "gruntplugin"
+  ]
 }
