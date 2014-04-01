@@ -1,0 +1,27 @@
+{
+  "name": "grunt-license-finder",
+  "version": "0.0.0",
+  "description": "Grunt plugin for finding licenses in the application or dependencies",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/iandotkelly/grunt-license-finder.git"
+  },
+  "keywords": [
+    "license",
+    "nlf",
+    "grunt"
+  ],
+  "author": "Ian Kelly",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/iandotkelly/grunt-license-finder/issues"
+  },
+  "homepage": "https://github.com/iandotkelly/grunt-license-finder",
+  "dependencies": {
+    "nlf": "~0.2.9"
+  }
+}
