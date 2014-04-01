@@ -27,63 +27,59 @@ grunt.initConfig({
   license_finder: {
     options: {
       // Task-specific options go here.
-    },
-    your_target: {
-      // Target-specific file lists and/or options go here.
-    },
+    }
   },
 });
 ```
+    var options = this.options({
+      production: false,      // whether to include production dependencies only
+      directory: process.cwd(), // the directory to scan - default to cwd
+      out: './licenses.txt',    // the ouput filename
+      csv: false          // whether to output in csv format
+    });
 
 ### Options
 
-#### options.separator
+#### options.directory
 Type: `String`
-Default value: `',  '`
+Default value: `current project directory`
 
-A string value that is used to do something with whatever.
+A string value for the path of the node project to scan
 
-#### options.punctuation
+#### options.production
+Type: `Boolean`
+Default value: false
+
+A boolean value. If true, only production dependencies are included in the scan
+
+#### options.out
 Type: `String`
-Default value: `'.'`
+Default value: `./licenses.txt`
 
-A string value that is used to do something else with whatever else.
+A string value for the filename of the output of the scan.
+
+#### options.csv
+Type: `Boolean`
+Default value: `./licenses.txt`
+
+A boolean value.  If true the output is in a comma-separated-variable format for import into a spreadsheet.
 
 ### Usage Examples
 
-#### Default Options
-In this example, the default options are used to do something with whatever. So if the `testing` file has the content `Testing` and the `123` file had the content `1 2 3`, the generated result would be `Testing, 1 2 3.`
-
-```js
-grunt.initConfig({
-  license_finder: {
-    options: {},
-    files: {
-      'dest/default_options': ['src/testing', 'src/123'],
-    },
-  },
-});
-```
 
 #### Custom Options
-In this example, custom options are used to do something else with whatever else. So if the `testing` file has the content `Testing` and the `123` file had the content `1 2 3`, the generated result in this case would be `Testing: 1 2 3 !!!`
+Example
 
 ```js
 grunt.initConfig({
   license_finder: {
     options: {
-      separator: ': ',
-      punctuation: ' !!!',
-    },
-    files: {
-      'dest/default_options': ['src/testing', 'src/123'],
+      production: true,
+      directory: '/Home/me/some-project',
+      out: '/Home/me/some-project/licenses.txt',
+      csv: true
     },
   },
 });
 ```
 
-## Contributing
-In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using [Grunt](http://gruntjs.com/).
-
-## Release History
-_(Nothing yet)_

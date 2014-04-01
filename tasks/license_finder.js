@@ -8,43 +8,56 @@
 
 'use strict';
 
+var nlf = require('nlf');
+var fs = require('fs');
+
 module.exports = function(grunt) {
 
-  // Please see the Grunt documentation for more information regarding task
-  // creation: http://gruntjs.com/creating-tasks
+	grunt.registerMultiTask('license_finder', 'Finds licenses in a node project and its dependencies', function() {
 
-  grunt.registerMultiTask('license_finder', 'Finds licenses in a node project and its dependencies', function() {
-    // Merge task-specific and/or target-specific options with these defaults.
-    var options = this.options({
-      punctuation: '.',
-      separator: ', '
-    });
+		var options = this.options({
+			production: false,			// whether to include production dependencies only
+			directory: process.cwd(),	// the directory to scan - default to cwd
+			out: './licenses.txt',		// the ouput filename
+			csv: false					// whether to output in csv format
+		});
 
-    // Iterate over all specified file groups.
-    this.files.forEach(function(f) {
-      // Concat specified files.
-      var src = f.src.filter(function(filepath) {
-        // Warn on and remove invalid source files (if nonull was set).
-        if (!grunt.file.exists(filepath)) {
-          grunt.log.warn('Source file "' + filepath + '" not found.');
-          return false;
-        } else {
-          return true;
-        }
-      }).map(function(filepath) {
-        // Read file source.
-        return grunt.file.read(filepath);
-      }).join(grunt.util.normalizelf(options.separator));
+		var done = this.async();
 
-      // Handle options.
-      src += options.punctuation;
+		nlf.find({
+			directory: options.directory,
+			production: options.production
+		}, function (err, data) {
 
-      // Write the destination file.
-      grunt.file.write(f.dest, src);
+			if (err) {
+				grunt.log.error('Failure to retrieve license information from nlf');
+				grunt.log.error(err);
+				return done(false);
+			}
 
-      // Print a success message.
-      grunt.log.writeln('File "' + f.dest + '" created.');
-    });
-  });
+			grunt.log.writeln('Retrieved license information');
 
+			// format the output
+			var formatter = options.csv ? nlf.csvFormatter : nlf.standardFormatter;
+
+			formatter.render(data, function (err, output) {
+				if (err) {
+					grunt.log.error('Failure to format license information');
+					grunt.log.error(err);
+					return done(false);
+				}
+
+				fs.writeFile(options.out, output, function (err) {
+					if (err) {
+						grunt.log.error('Failure to write to file: ' + options.out);
+						grunt.log.error(err);
+						return done(false);
+					}
+
+					grunt.log.writeln('License information written to: ' + options.out);
+					done();
+				});
+			});
+		});
+	});
 };
