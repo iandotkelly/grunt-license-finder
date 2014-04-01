@@ -31,12 +31,6 @@ grunt.initConfig({
   },
 });
 ```
-    var options = this.options({
-      production: false,      // whether to include production dependencies only
-      directory: process.cwd(), // the directory to scan - default to cwd
-      out: './licenses.txt',    // the ouput filename
-      csv: false          // whether to output in csv format
-    });
 
 ### Options
 
