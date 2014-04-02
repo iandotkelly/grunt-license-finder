@@ -37,5 +37,8 @@
     "license",
     "nlf",
     "audit"
-  ]
+  ],
+  "dependencies": {
+    "nlf": "~0.2.9"
+  }
 }

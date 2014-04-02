@@ -60,7 +60,6 @@ A boolean value.  If true the output is in a comma-separated-variable format for
 
 ### Usage Examples
 
-
 #### Custom Options
 Example
 
@@ -76,4 +75,30 @@ grunt.initConfig({
   },
 });
 ```
+
+### Example output
+
+<pre>
+commander@0.6.1 [license(s): MIT]
+└── readme files: MIT
+
+read-installed@0.2.2 [license(s): BSD]
+└── license files: BSD
+
+glob@3.2.3 [license(s): BSD]
+├── package.json:  BSD
+└── license files: BSD
+
+archy@0.0.2 [license(s): MIT/X11]
+└── package.json:  MIT/X11
+
+json-stringify-safe@5.0.0 [license(s): BSD]
+├── package.json:  BSD
+└── license files: BSD
+
+should@1.2.2 [license(s): MIT]
+└── readme files: MIT
+</pre>
+
+For output in CSV format use the csv: true option.
 
