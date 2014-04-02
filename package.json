@@ -34,9 +34,15 @@
   },
   "keywords": [
     "gruntplugin",
+    "grunt",
     "license",
+    "finder",
     "nlf",
-    "audit"
+    "audit",
+    "licence",
+    "checker",
+    "legal",
+    "dependency"
   ],
   "dependencies": {
     "nlf": "~0.2.9"
