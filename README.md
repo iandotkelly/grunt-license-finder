@@ -1,4 +1,4 @@
-# grunt-license-finder
+# grunt-license-finder [![Dependency Status](https://gemnasium.com/iandotkelly/grunt-license-finder.svg)](https://gemnasium.com/iandotkelly/grunt-license-finder)
 
 > Finds licenses in a node project and its dependencies
 
