@@ -19,14 +19,16 @@ module.exports = function(grunt) {
 			production: false,			// whether to include production dependencies only
 			directory: process.cwd(),	// the directory to scan - default to cwd
 			out: './licenses.txt',		// the ouput filename
-			csv: false					// whether to output in csv format
+			csv: false,					// whether to output in csv format
+			depth: undefined			// the maximum depth to go to
 		});
 
 		var done = this.async();
 
 		nlf.find({
 			directory: options.directory,
-			production: options.production
+			production: options.production,
+			depth: options.depth
 		}, function (err, data) {
 
 			if (err) {

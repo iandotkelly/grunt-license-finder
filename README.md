@@ -60,6 +60,12 @@ Default value: `./licenses.txt`
 
 A boolean value.  If true the output is in a comma-separated-variable format for import into a spreadsheet.
 
+#### options.depth
+Type: `Number`
+Default value: if undefined this defaults to infinite
+
+The maximum depth of node_modules to traverse, 0 means the current project only etc.
+
 ### Usage Examples
 
 #### Custom Options
