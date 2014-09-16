@@ -1,4 +1,11 @@
 
+1.1.0
+=================
+
+* Update to nlf@1.1.0 which supports a depth option
+* Add depth option
+* Fix bug in README which defined the options incorrectly
+
 1.0.1
 =================
 
