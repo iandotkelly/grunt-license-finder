@@ -64,7 +64,7 @@ A boolean value.  If true the output is in a comma-separated-variable format for
 Type: `Number`
 Default value: if undefined this defaults to infinite
 
-The maximum depth of node_modules to traverse, 0 means the current project only etc.
+The maximum depth of node_modules to traverse, 0 means the immediate dependencies, add 1 per module depth
 
 ### Usage Examples
 
