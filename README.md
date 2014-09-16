@@ -25,8 +25,10 @@ In your project's Gruntfile, add a section named `license_finder` to the data ob
 ```js
 grunt.initConfig({
   license_finder: {
-    options: {
-      // Task-specific options go here.
+    all:
+      options: {
+        // Task-specific options go here.
+      }
     }
   },
 });
@@ -66,13 +68,15 @@ Example
 ```js
 grunt.initConfig({
   license_finder: {
-    options: {
-      production: true,
-      directory: '/Home/me/some-project',
-      out: '/Home/me/some-project/licenses.txt',
-      csv: true
-    },
-  },
+    all: {
+      options: {
+        production: true,
+        directory: '/Home/me/some-project',
+        out: '/Home/me/some-project/licenses.txt',
+        csv: true
+      }
+    }
+  }
 });
 ```
 
