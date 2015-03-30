@@ -1,4 +1,9 @@
 
+1.2.0 (Mar 29, 2015)
+====================
+
+* Update to nlf@1.2.0 with improved performance, and alphabetic sorting of output
+
 1.1.0
 =================
 
