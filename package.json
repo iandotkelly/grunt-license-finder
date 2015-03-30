@@ -26,9 +26,9 @@
     "test": "grunt test"
   },
   "devDependencies": {
-    "grunt-contrib-jshint": "~0.10.0",
     "grunt": "~0.4.4",
-    "grunt-cli": "~0.1.13"
+    "grunt-cli": "~0.1.13",
+    "grunt-contrib-jshint": "^0.11.1"
   },
   "peerDependencies": {
     "grunt": "~0.4.4"
@@ -47,6 +47,6 @@
     "dependency"
   ],
   "dependencies": {
-    "nlf": "^1.1.0"
+    "nlf": "^1.2.0"
   }
 }
