@@ -1,3 +1,7 @@
+1.2.1 (May 10, 2015)
+====================
+
+* Update to nlf@1.3.1 which fixes some bugs with coping with missing fields in package.json
 
 1.2.0 (Mar 29, 2015)
 ====================

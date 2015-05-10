@@ -1,7 +1,7 @@
 {
   "name": "grunt-license-finder",
   "description": "Finds licenses in a node project and its dependencies",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "homepage": "https://github.com/iandotkelly/grunt-license-finder",
   "author": {
     "name": "Ian Kelly"
