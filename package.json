@@ -47,6 +47,6 @@
     "dependency"
   ],
   "dependencies": {
-    "nlf": "^1.2.0"
+    "nlf": "^1.3.1"
   }
 }
