@@ -1,3 +1,10 @@
+1.3.0 (February 1, 2017)
+====================
+
+* Update dependencies, confirm this works on Grunt 1.x
+* Update to nlf@1.4.3
+* Fix issue #5 adding back options parameter to render call
+
 1.2.2 (July 12, 2015)
 ====================
 
