@@ -42,7 +42,7 @@ module.exports = function(grunt) {
 			// format the output
 			var formatter = options.csv ? nlf.csvFormatter : nlf.standardFormatter;
 
-			formatter.render(data, function (err, output) {
+			formatter.render(data, options, function (err, output) {
 				if (err) {
 					grunt.log.error('Failure to format license information');
 					grunt.log.error(err);
