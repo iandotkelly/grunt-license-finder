@@ -1,3 +1,8 @@
+2.0.0 (May 7, 2017)
+====================
+
+* Update to nlf@2.0.0, which better supports the npm3 flattened dependency tree
+
 1.3.0 (February 1, 2017)
 ====================
 

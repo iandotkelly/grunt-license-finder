@@ -1,7 +1,7 @@
 {
   "name": "grunt-license-finder",
   "description": "Finds licenses in a node project and its dependencies",
-  "version": "1.3.0",
+  "version": "2.0.0",
   "homepage": "https://github.com/iandotkelly/grunt-license-finder",
   "author": {
     "name": "Ian Kelly"
@@ -20,7 +20,7 @@
     }
   ],
   "engines": {
-    "node": ">= 0.10.0"
+    "node": ">= 4"
   },
   "scripts": {
     "test": "grunt test"
@@ -47,6 +47,6 @@
     "dependency"
   ],
   "dependencies": {
-    "nlf": "^1.4.3"
+    "nlf": "^2.0.0"
   }
 }
