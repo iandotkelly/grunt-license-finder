@@ -1,4 +1,4 @@
-# grunt-license-finder [![Build Status](https://secure.travis-ci.org/iandotkelly/grunt-license-finder.png)](http://travis-ci.org/iandotkelly/grunt-license-finder)[![Dependency Status](https://gemnasium.com/iandotkelly/grunt-license-finder.svg)](https://gemnasium.com/iandotkelly/grunt-license-finder)
+# grunt-license-finder [![Build Status](https://secure.travis-ci.org/iandotkelly/grunt-license-finder.svg)](http://travis-ci.org/iandotkelly/grunt-license-finder)[![Dependency Status](https://gemnasium.com/iandotkelly/grunt-license-finder.svg)](https://gemnasium.com/iandotkelly/grunt-license-finder)
 
 > Finds licenses in a node project and its dependencies
 
